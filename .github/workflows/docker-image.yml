@@ -7,6 +7,29 @@ on:
     branches: [ "master" ]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    -
+      name: checkout
+      uses: actions/checkout@v3
+
+    -
+      name: Python setup
+      uses: actions/setup-python@v3
+
+    -
+      name: Install requirements
+      run: pip install -r requirements.txt
+    -
+      run: pip install flake8
+      name: Install flake
+    -
+      name: Run nity test
+      run: pytest .
+    -
+      name: Static test
+      run: flake8 .
 
   build:
 
