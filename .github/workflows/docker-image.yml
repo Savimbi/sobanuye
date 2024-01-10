@@ -25,14 +25,14 @@ jobs:
       run: pip install flake8
       name: Install flake
     -
-      name: Run nity test
-      run: ls
+      name: Run unity test
+      run: manage.py test
     -
       name: Static test
       run: flake8 .
 
   build:
-
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
