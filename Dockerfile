@@ -8,6 +8,6 @@ WORKDIR /code
 
 EXPOSE 8000
 
-ENTRYPOINT["python", "moviereviews/manage.py"]
-CMD["runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python", "moviereviews/manage.py"]
+CMD ["runserver", "0.0.0.0:8000"]
 
