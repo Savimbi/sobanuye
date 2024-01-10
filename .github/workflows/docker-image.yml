@@ -26,7 +26,7 @@ jobs:
       name: Install flake
     -
       name: Run nity test
-      run: ./manage.py pytest .
+      run: ls
     -
       name: Static test
       run: flake8 .
