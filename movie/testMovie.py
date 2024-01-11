@@ -6,8 +6,8 @@ from movie.models import Movie
 
 class MovieTestCase(TestCase):
     def test_movie(self):
-        movie = Movie(title = 'Agasobanuye test', description ='Testing Movie')
-        self.assertEqual(movie.title, 'Agasobanuye test')  #add assertion here
+        movie = Movie(title='Agasobanuye test', description='Testing Movie')
+        self.assertEqual(movie.title, 'Agasobanuye test')  # add assertion here
         self.assertEqual(movie.description, 'Testing Movie')
 
 
