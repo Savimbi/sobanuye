@@ -26,7 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", movieViews.home, name="home"),
     path("about/", movieViews.about, name="about"),
-    path("signup/", movieViews.signup, name='signup')
+    path("signup/", movieViews.signup, name='signup'),
+    path('', include('django_prometheus.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
